@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>JavaScript Internal</title>
+      
+      <script type = "text/JavaScript">
+         async function Hello() {
+            try {
+            const timeout = 5000; // promise will fail if no response in 5 seconds
+            const token = await window.getReactNativeApi(timeout).getToken();
+            alert(token)
+            } catch (error) {
+            alert(error)
+            }
+         }
+      </script>
+   </head>
+
+   <body>
+      <input type = "button" onclick = "Hello();" name = "ok" value = "Click Me" />
+   </body>
+
+</html>
